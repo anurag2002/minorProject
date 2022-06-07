@@ -22,14 +22,14 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/", (req, res) => res.render("../index"))
 app.set("view engine", "ejs");
 
 app.use("/", UserRoutes);
-app.use(express.static(path.join(__dirname, "views")));
+app.use(express.static(path.join(__dirname, "../views")));
 app.use(express.static(path.join(__dirname)));
 
 //Rendering Embedded JavaScript
+app.get("/", (req, res) => res.render("index"))
 app.get("/register", (req, res) => res.render("registration_page"))
 app.get("/home", (req, res) => res.render("home"))
 app.get("/1984", (req, res) => res.render("1984"))
