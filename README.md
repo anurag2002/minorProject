@@ -1,6 +1,6 @@
 # Minor Project of Group G9
 
-Made by
+Made by:
 
 Anurag Pandey 1915010 1904980
 
