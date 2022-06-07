@@ -25,8 +25,9 @@ app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 
 app.use("/", UserRoutes);
-app.use(express.static(path.join(__dirname, "views")));
+// app.use(express.static(path.join(__dirname, "views")));
 app.use(express.static(path.join(__dirname)));
+app.set('views', path.join(__dirname, 'views'));
 
 app.get("*", (req, res) =>
     res.sendFile(
