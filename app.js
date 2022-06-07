@@ -27,13 +27,7 @@ app.set("view engine", "ejs");
 app.use("/", UserRoutes);
 // app.use(express.static(path.join(__dirname, "views")));
 app.use(express.static(path.join(__dirname)));
-app.set('views', path.join(__dirname, 'views'));
-
-app.get("*", (req, res) =>
-    res.sendFile(
-        path.resolve(__dirname, "../")
-    )
-);
+app.set('views', path.join(__dirname, ''));
 
 //Rendering Embedded JavaScript
 app.get("/", (req, res) => res.render("index"))
